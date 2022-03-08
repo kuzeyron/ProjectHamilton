@@ -1,0 +1,25 @@
+{
+	"startup": {
+		"auto_load_dir": true,
+		"scripts": ["1"]
+	},
+	"server": {
+		"address": "localhost",
+		"blacklist": ["8.8.8.8", "8.8.4.4"],
+		"interface": "ssh",
+		"motd": "[*] Welcome to ProjectHamilton!\n[*] We hope you'll find this project to be very useful for your projects.",
+		"port": 2200,
+		"protocols": {
+			"ssh": "~/.ssh/id_rsa"
+		},
+		"server_name": "Hamilton",
+		"timeout": 30
+	},
+	"logger": {
+		"dir_name": "logs",
+		"hide_info": false,
+		"hide_unrelated_logs": true,
+		"log_data": true,
+		"log_level": 4
+	}
+}

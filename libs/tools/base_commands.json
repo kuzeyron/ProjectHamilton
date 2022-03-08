@@ -1,0 +1,32 @@
+{
+    "list": {
+        "send_message": {
+            "target": "self.list_running_cmods"
+        },
+        "about": "List all running cmods.",
+        "log_message": "[*] Listing all available CMOD's for {0}@{1}.."
+    },
+    "thread-count": {
+        "send_message": {
+            "message": "\n Active threads: {0}\n\n",
+            "target": "threading.active_count"
+        },
+        "about": "Show active threads.",
+        "log_message": "[*] Counting all threads: {0}."
+    },
+    "halt": {
+        "send_message": {
+            "message": "\n Will now refuse any commands.\n\n"
+        },
+        "log_message": "[*] Disabled the prompt for {0}@{1}.",
+        "hold_prompt": true,
+        "about": "Prevent the prompt to show up."
+    },
+    "cls": {
+        "send_message": {
+            "message": "\u001b[2J"
+        },
+        "about": "Clears the terminal.",
+        "log_message": "[*] {0}@{1} asked to reset terminal."
+    }
+}

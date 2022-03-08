@@ -1,0 +1,70 @@
+/*
+	Configuration file for ProjectHamilton.
+	Developer: kuzeyron.
+*/
+
+{
+	/*
+		; `auto_load_dir`:
+		;		Startup is like running CMOD. Except Startup makes sure your scripts launches at start.
+		;		`true/false`. true if you want it to load everything from Startup folder.
+		; `scripts`:
+		;		The names on the scripts you want to launch on boot.
+	*/
+	"startup": {
+		"auto_load_dir": true,
+		"scripts": "1"
+	},
+	/*
+		; Interface to be used. `ssl`, `bluetooth`, `ssh` and `oscpy`.
+		; `address` for setting the server address.
+		; `port`:
+		;		For setting the server port.
+		;		Note: `Port 22 is probably in use already.`
+		; `motd`:
+		;		This sets the MOTD when you sign in with terminal.
+		;		`\n` splits the text into a newline.
+		; `blacklist`:
+		;		A filter for blocking the incoming calls.
+		; `interface`:
+		;		Chosen protocol. Can be any of `ssl`, `bluetooth`, `ssh` and `oscpy`.
+		; `protocols`:
+		;		Needed path for keys that requires it.
+		; `server_name`:
+		;		Set your own name.
+		; `timeout`:
+		;		Set the timeperiod between client connections.
+	*/
+	"server": {
+		"address": "localhost",
+		"blacklist": ["8.8.8.8", "8.8.4.4"],
+		"interface": "ssh",
+		"motd": "[*] Welcome to ProjectHamilton!\n[*] We hope you'll find this project to be very useful for your projects.",
+		"port": 2200,
+		"protocols": {
+			"ssh": "~/.ssh/id_rsa"
+		},
+		"server_name": "Hamilton",
+		"timeout": 30
+	},
+	/*
+		; `"log_data": true` if you want to log every events.
+		; `dir_name` is the folder name for the logs.
+		; `hide_info` makes only sense when `log_data` is true. Which means `"log_data": true` will save the ouput.
+		; `hide_info` makes sure that console will not be filled with information from the logger.
+		; `hide_unrelated_logs` hides every messages from the SSH feed.
+		; `log_level`:
+		;		info:     0,
+		;		debug:    1,
+		;		warning:  2,
+		;		error:    3,
+		;		critical: 4
+	*/
+	"logger": {
+		"dir_name": "logs",
+		"log_data": true,
+		"hide_info": false,
+		"hide_unrelated_logs": true,
+		"log_level": 4
+	}
+}

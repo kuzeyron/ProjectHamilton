@@ -1,0 +1,12 @@
+.:HOW TO USE HAMILTON:.
+
+For now ProjectHamilton is currently working only with Paramiko SSH.
+
+Make sure you have a valid ssh keys.
+Otherwise you would need to execute `ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"` on the host.
+Check the `config.json`, there might is something else you want to change.
+
+Run server with `python3 server.py` and launch another Terminal or Tab
+and connect with `ssh yourusername@localhost -p 2200 terminal`.
+
+Port is set to `2200` instead of `22`. And can be changed in `config.json`.
